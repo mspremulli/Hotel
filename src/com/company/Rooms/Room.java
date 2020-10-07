@@ -1,18 +1,19 @@
-package src.com.company;
+package src.com.company.Rooms;
 
-public class HotelRoom {
+
+public class Room {
   private int roomNumber;
   private String roomType;
   private int floorNumber;
   private boolean isOccupied;
   private boolean needsCleaning;
-  private Client client;
+  private src.com.company.Client client;
   private int averagePrice;
 
   /**
    * Default Constructor
    */
-  public HotelRoom() {
+  public Room() {
     roomNumber = 1;
     roomType = "single";
     floorNumber = 1;
@@ -22,13 +23,13 @@ public class HotelRoom {
     averagePrice = 1000;
   }
 
-  public HotelRoom(int roomNumber,
-                   String roomType,
-                   int floorNumber,
-                   boolean isOccupied,
-                   boolean needsCleaning,
-                   Client client,
-                   int averagePrice) {
+  public Room(int roomNumber,
+              String roomType,
+              int floorNumber,
+              boolean isOccupied,
+              boolean needsCleaning,
+              src.com.company.Client client,
+              int averagePrice) {
     this.roomNumber = roomNumber;
     this.roomType = roomType;
     this.floorNumber = floorNumber;
@@ -48,7 +49,6 @@ public class HotelRoom {
   }
 
   public void clean(){ needsCleaning = false; }
-
 
 }
 
