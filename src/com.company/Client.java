@@ -1,11 +1,13 @@
 package src.com.company;
 
 public class Client {
-  String name;
-  int partySize;
-  int CurrentBill;
-  int prepaid;
-  String phoneNumber;
+  private String name;
+  private int partySize;
+  private int currentBill;
+  private int prepaid;
+  private String phoneNumber;
+  private int roomNumber;
+  private int roomType;
 
   public String getName() {
     return name;
@@ -15,18 +17,16 @@ public class Client {
     return roomNumber;
   }
 
-  int roomNumber;
-  int roomType;
 
-  public void makePayment(){
-
+  public void makePayment(int payment){
+    prepaid += payment;
   }
-  public void chargeRoom(){
 
+  public void chargeRoom(int charge){
+    currentBill += charge;
   }
 
   public int getOutstanding(){
-
-    return 0;
+    return currentBill;
   }
 }
