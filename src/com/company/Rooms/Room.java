@@ -2,6 +2,10 @@ package src.com.company.Rooms;
 
 
 public class Room {
+  public int getRoomNumber() {
+    return roomNumber;
+  }
+
   private int roomNumber;
   private String roomType;
   private int floorNumber;
@@ -41,11 +45,12 @@ public class Room {
 
   public void reserve(){ isOccupied = true; }
 
-  public void checkout(){
+  public int checkout(){
     client = null;
     isOccupied = false;
     needsCleaning = true;
     System.out.println(averagePrice);
+    return averagePrice;
   }
 
   public void clean(){ needsCleaning = false; }
