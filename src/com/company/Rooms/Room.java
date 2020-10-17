@@ -1,14 +1,12 @@
 package src.com.company.Rooms;
 
 
-public class Room {
-  public int getRoomNumber() {
-    return roomNumber;
-  }
+public abstract class Room {
 
-  private int roomNumber;
-  private String roomType;
-  private int floorNumber;
+
+  private final int roomNumber;
+  private final String roomType;
+  private final int floorNumber;
   private boolean isOccupied;
   private boolean needsCleaning;
   private src.com.company.Client client;
@@ -41,6 +39,10 @@ public class Room {
     this.needsCleaning = needsCleaning;
     this.client = client;
     this.averagePrice = averagePrice;
+  }
+
+  public int getRoomNumber() {
+    return roomNumber;
   }
 
   public void reserve(){ isOccupied = true; }
